@@ -92,7 +92,7 @@ const Navbar = () => {
             </li>
             <li>
               <NavLink
-                to="/addTourismSpot"
+                to="/addTouristSpot"
                 className={({ isActive, isPending }) =>
                   isPending
                     ? "pending"
@@ -106,7 +106,7 @@ const Navbar = () => {
             </li>
             <li>
               <NavLink
-                to="/allTourismSpot"
+                to="/allTouristsSpot"
                 className={({ isActive, isPending }) =>
                   isPending
                     ? "pending"
@@ -220,7 +220,7 @@ const Navbar = () => {
             <li>
               <NavLink
                 onClick={() => isSetOpen(!isOpen)}
-                to="/addTourismSpot"
+                to="/addTouristSpot"
                 className={({ isActive, isPending }) =>
                   isPending
                     ? "pending"
@@ -235,7 +235,7 @@ const Navbar = () => {
             <li>
               <NavLink
                 onClick={() => isSetOpen(!isOpen)}
-                to="/allTourismSpot"
+                to="/allTouristsSpot"
                 className={({ isActive, isPending }) =>
                   isPending
                     ? "pending"

@@ -2,11 +2,12 @@ import { createBrowserRouter } from "react-router-dom";
 import MainLayouts from "../Layouts/MainLayouts";
 import ErrorPage from "../Pages/ErrorPage";
 import Home from "../Pages/Home";
-import AddTourismSpot from "../Pages/AddTourismSpot";
-import AllTourisemSpot from "../Pages/AllTourisemSpot";
+
 import MyCart from "../Pages/MyCart";
 import Register from "../Pages/Register";
 import Login from "../Pages/Login";
+import AddTouristSpot from "../Pages/AddTouristsSpot";
+import AllTouristsSpot from "../Pages/AllTouristsSpot";
 
 const Route = createBrowserRouter([
   {
@@ -17,14 +18,15 @@ const Route = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+        loader: () => fetch("http://localhost:5000/tourist_spot"),
       },
       {
-        path: "/addTourismSpot",
-        element: <AddTourismSpot></AddTourismSpot>,
+        path: "/addTouristSpot",
+        element: <AddTouristSpot></AddTouristSpot>,
       },
       {
-        path: "/allTourismSpot",
-        element: <AllTourisemSpot></AllTourisemSpot>,
+        path: "/allTouristsSpot",
+        element: <AllTouristsSpot></AllTouristsSpot>,
       },
       {
         path: "/myCart",
