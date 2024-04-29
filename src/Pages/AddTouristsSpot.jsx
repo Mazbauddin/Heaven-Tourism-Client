@@ -194,6 +194,7 @@ const AddTouristSpot = () => {
               <input
                 type="text"
                 name="user_Email"
+                defaultValue={user.email}
                 placeholder="User Email"
                 className="input input-bordered w-full"
               />
@@ -207,6 +208,7 @@ const AddTouristSpot = () => {
               <input
                 type="text"
                 name="user_Name"
+                defaultValue={user.displayName}
                 placeholder="User Name"
                 className="input input-bordered w-full"
               />

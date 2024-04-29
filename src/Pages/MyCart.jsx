@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import useAuthHooks from "../Hooks/UseAuthHooks";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const MyCart = () => {
   const { user } = useAuthHooks() || {};
@@ -23,6 +24,11 @@ const MyCart = () => {
       .then((data) => {
         if (data.deletedCount > 0) {
           setControl(!control);
+          Swal.fire({
+            title: "Deleted!",
+            text: "Your Tourist Spot has been deleted.",
+            icon: "success",
+          });
         }
 
         // // remove
