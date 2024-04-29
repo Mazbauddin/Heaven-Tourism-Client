@@ -8,6 +8,9 @@ import Register from "../Pages/Register";
 import Login from "../Pages/Login";
 import AddTouristSpot from "../Pages/AddTouristsSpot";
 import AllTouristsSpot from "../Pages/AllTouristsSpot";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import View_Details from "../Pages/View_Details";
+import Update from "../Pages/Update";
 
 const Route = createBrowserRouter([
   {
@@ -22,7 +25,11 @@ const Route = createBrowserRouter([
       },
       {
         path: "/addTouristSpot",
-        element: <AddTouristSpot></AddTouristSpot>,
+        element: (
+          <PrivateRoute>
+            <AddTouristSpot></AddTouristSpot>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/allTouristsSpot",
@@ -30,7 +37,25 @@ const Route = createBrowserRouter([
       },
       {
         path: "/myCart",
-        element: <MyCart></MyCart>,
+        element: (
+          <PrivateRoute>
+            <MyCart></MyCart>
+          </PrivateRoute>
+        ),
+        loader: () => fetch("http://localhost:5000/myCart"),
+      },
+      {
+        path: "/viewDetails",
+        element: (
+          <PrivateRoute>
+            <View_Details></View_Details>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "update/:id",
+        element: <Update></Update>,
+        // loader: ({ params }) => fetch(`http://localhost:5000/coffee/${params.id}`),
       },
       {
         path: "/register",

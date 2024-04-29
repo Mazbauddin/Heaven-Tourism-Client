@@ -1,8 +1,22 @@
-import Swal from "sweetalert2";
-import useAuthHooks from "../Hooks/UseAuthHooks";
-const AddTouristSpot = () => {
-  const { user } = useAuthHooks() || {};
-  const handleAddTouristSpot = (event) => {
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+
+const Update = () => {
+  const { id } = useParams();
+  console.log(id);
+
+  const [spot, setSpot] = useState({});
+
+  useEffect(() => {
+    fetch(`http://localhost:5000/singleSpot/${id}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setSpot(data);
+        console.log(data);
+      });
+  }, [id]);
+
+  const handleUpdate = () => {
     event.preventDefault();
 
     const form = event.target;
@@ -15,12 +29,10 @@ const AddTouristSpot = () => {
     const seasonality = form.seasonality.value;
     const travel_time = form.travel_time.value;
     const totalVisitorsPerYear = form.totalVisitorsPerYear.value;
-    const user_Email = form.user_Email.value;
-    const user_Name = form.user_Name.value;
-    const image_Url = form.image_Url.value;
-    const email = user.email;
 
-    const newTouristSpot = {
+    const image_Url = form.image_Url.value;
+
+    const updateSpot = {
       country_Name,
       tourists_spot_name,
       spot_Location,
@@ -29,38 +41,19 @@ const AddTouristSpot = () => {
       seasonality,
       travel_time,
       totalVisitorsPerYear,
-      user_Email,
-      user_Name,
       image_Url,
-      email,
     };
-    console.log(newTouristSpot);
-
-    // send data to the server
-    fetch("http://localhost:5000/tourist_spot", {
-      method: "POST",
+    fetch(`http://localhost:5000/updateSpot/${id}`, {
+      method: "PUT",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(newTouristSpot),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        if (data.insertedId) {
-          Swal.fire({
-            title: "Success!",
-            text: "User Added Successfully",
-            icon: "success",
-            confirmButtonText: "Cool",
-          });
-        }
-      });
+      body: JSON.stringify(updateSpot),
+    });
   };
   return (
-    <div className=" p-24">
-      <h2 className="text-3xl font-extrabold text-center">Add Tourists Spot</h2>
-      <form onSubmit={handleAddTouristSpot}>
+    <div>
+      <form onSubmit={handleUpdate}>
         {/* Country Name */}
         <div className="md:flex mb-8">
           <div className="form-control md:w-1/2">
@@ -69,10 +62,12 @@ const AddTouristSpot = () => {
             </label>
             <select
               name="country_Name"
+              id="country_Name"
+              defaultValue={spot.country_Name}
               className="select select-bordered w-full"
             >
               <option disabled selected>
-                Pick your favorite Country
+                Southern favorite Country
               </option>
               <option>Bangladesh</option>
               <option>Thailand</option>
@@ -91,6 +86,7 @@ const AddTouristSpot = () => {
               <input
                 type="text"
                 name="tourists_spot_name"
+                defaultValue={spot.tourists_spot_name}
                 placeholder="Available Quantity"
                 className="input input-bordered w-full"
               />
@@ -107,6 +103,7 @@ const AddTouristSpot = () => {
               <input
                 type="text"
                 name="spot_Location"
+                defaultValue={spot.spot_Location}
                 placeholder="location"
                 className="input input-bordered w-full"
               />
@@ -120,6 +117,7 @@ const AddTouristSpot = () => {
               <input
                 type="text"
                 name="short_Description"
+                defaultValue={spot.short_Description}
                 placeholder="Short Description"
                 className="input input-bordered w-full"
               />
@@ -136,6 +134,7 @@ const AddTouristSpot = () => {
               <input
                 type="text"
                 name="average_cost"
+                defaultValue={spot.average_cost}
                 placeholder="Average Cost"
                 className="input input-bordered w-full"
               />
@@ -149,6 +148,7 @@ const AddTouristSpot = () => {
               <input
                 type="text"
                 name="seasonality"
+                defaultValue={spot.seasonality}
                 placeholder="Seasonality"
                 className="input input-bordered w-full"
               />
@@ -165,6 +165,7 @@ const AddTouristSpot = () => {
               <input
                 type="text"
                 name="travel_time"
+                defaultValue={spot.travel_time}
                 placeholder="Travel Time"
                 className="input input-bordered w-full"
               />
@@ -178,41 +179,14 @@ const AddTouristSpot = () => {
               <input
                 type="text"
                 name="totalVisitorsPerYear"
+                defaultValue={spot.totalVisitorsPerYear}
                 placeholder="Total Visitors Per Year"
                 className="input input-bordered w-full"
               />
             </label>
           </div>
         </div>
-        {/* User Email and User Name */}
-        <div className="md:flex mb-8">
-          <div className="form-control md:w-1/2">
-            <label className="label">
-              <span className="label-text">User Email</span>
-            </label>
-            <label className="input-group">
-              <input
-                type="text"
-                name="user_Email"
-                placeholder="User Email"
-                className="input input-bordered w-full"
-              />
-            </label>
-          </div>
-          <div className="form-control md:w-1/2 ml-4">
-            <label className="label">
-              <span className="label-text">User Name</span>
-            </label>
-            <label className="input-group">
-              <input
-                type="text"
-                name="user_Name"
-                placeholder="User Name"
-                className="input input-bordered w-full"
-              />
-            </label>
-          </div>
-        </div>
+
         {/* form Photo URL row */}
         <div className="mb-8">
           <div className="form-control ">
@@ -223,6 +197,7 @@ const AddTouristSpot = () => {
               <input
                 type="text"
                 name="image_Url"
+                defaultValue={spot.image_Url}
                 placeholder="Image URL"
                 className="input input-bordered w-full"
               />
@@ -232,7 +207,7 @@ const AddTouristSpot = () => {
 
         <input
           type="submit"
-          value="Add Tourists Spot"
+          value="Update"
           className=" px-4 w-full py-2 mt-4 rounded hover:bg-[#ec936fa6]  bg-[#5991e6] duration-200 text-white cursor-pointer font-semibold"
         />
       </form>
@@ -240,4 +215,4 @@ const AddTouristSpot = () => {
   );
 };
 
-export default AddTouristSpot;
+export default Update;
