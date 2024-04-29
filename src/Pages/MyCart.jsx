@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react";
 import useAuthHooks from "../Hooks/UseAuthHooks";
-import { Link, useLoaderData } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const MyCart = () => {
-  // const loadedUsers = useLoaderData();
-  // const [users, setUsers] = useState(loadedUsers);
   const { user } = useAuthHooks() || {};
   const [item, setItem, index] = useState([]);
+  const [control, setControl] = useState(false);
 
   useEffect(() => {
     fetch(`http://localhost:5000/myCart/${user?.email}`)
@@ -14,8 +13,7 @@ const MyCart = () => {
       .then((data) => {
         setItem(data);
       });
-  }, [user]);
-
+  }, [user, control]);
 
   const handleDelete = (id) => {
     fetch(`http://localhost:5000/delete/${id}`, {
@@ -23,7 +21,9 @@ const MyCart = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log("delete success");
+        if (data.deletedCount > 0) {
+          setControl(!control);
+        }
 
         // // remove
         // const remainingData = users.filter((item) => item._id !== id);
@@ -32,7 +32,7 @@ const MyCart = () => {
   };
 
   return (
-    <div>
+    <div className="p-24">
       <h2>spots: {item.length}</h2>
 
       <div className="overflow-x-auto">
@@ -40,7 +40,8 @@ const MyCart = () => {
           {/* head */}
           <thead>
             <tr>
-              <th></th>
+              <th>Sl No.</th>
+              <th>Spot Image</th>
               <th>Country Name</th>
               <th>Tourist Spot</th>
               <th>Spot Location</th>
@@ -53,16 +54,31 @@ const MyCart = () => {
             {item?.map((spot) => (
               <tr key={spot._id}>
                 <th>1</th>
+                <td>
+                  <div className="avatar">
+                    <div className="mask mask-squircle w-12 h-12">
+                      <img
+                        src={spot.image_Url}
+                        alt="Avatar Tailwind CSS Component"
+                      />
+                    </div>
+                  </div>
+                </td>
                 <td>{spot.country_Name}</td>
                 <td>{spot.tourists_spot_name}</td>
                 <td>{spot.spot_Location}</td>
                 <td>
                   <Link to={`/update/${spot._id}`}>
-                    <button>Update</button>
+                    <button className="btn_wave btn1 rounded-md">Update</button>
                   </Link>
                 </td>
                 <td>
-                  <button onClick={() => handleDelete(spot._id)}>Delete</button>
+                  <button
+                    className="btn_wave btn1 rounded-md"
+                    onClick={() => handleDelete(spot._id)}
+                  >
+                    Delete
+                  </button>
                 </td>
               </tr>
             ))}

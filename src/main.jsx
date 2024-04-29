@@ -4,6 +4,9 @@ import "./index.css";
 import { RouterProvider } from "react-router-dom";
 import FirebaseProvider from "./FirebaseProvider/FirebaseProvider";
 import Route from "./Routes/Route";
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

@@ -1,6 +1,9 @@
 import { useLoaderData } from "react-router-dom";
 import Slider from "../Components/Slider";
 import Tourist_Card from "../Tourist_Card/Tourist_Card";
+import Testimonial from "../Components/Testimonial";
+import Team from "../Components/Team";
+import Footer from "../Components/Footer";
 
 const Home = () => {
   const tourist_spot = useLoaderData();
@@ -17,6 +20,16 @@ const Home = () => {
         {tourist_spot.map((tourist) => (
           <Tourist_Card key={tourist._id} tourist={tourist}></Tourist_Card>
         ))}
+      </div>
+
+      <div>
+        <Testimonial></Testimonial>
+      </div>
+      <div>
+        <Team></Team>
+      </div>
+      <div>
+        <Footer></Footer>
       </div>
     </div>
   );

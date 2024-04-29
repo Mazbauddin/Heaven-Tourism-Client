@@ -58,7 +58,7 @@ const AddTouristSpot = () => {
       });
   };
   return (
-    <div className=" p-24">
+    <div className="p-24">
       <h2 className="text-3xl font-extrabold text-center">Add Tourists Spot</h2>
       <form onSubmit={handleAddTouristSpot}>
         {/* Country Name */}
