@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 
 import { useState } from "react";
-import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { FaEye, FaEyeSlash, FaUnlockAlt } from "react-icons/fa";
 
 import useAuthHooks from "../Hooks/UseAuthHooks";
 import SocialLogin from "../Components/SocialLogin";
@@ -59,111 +59,118 @@ const Register = () => {
 
   return (
     <>
-      <div className="hero min-h-screen bg-base-200 pb-20">
+      <div className="hero min-h-screen my-20">
         <div className="hero-content flex-col lg:flex-row-reverse">
-          <div
-            className="text-center lg:text-left"
-            data-aos="fade-left"
-            data-aos-duration="1000"
-          >
-            <h1 className="text-6xl lg:text-8xl font-bold text-[#e5958e]">
-              Register Now!
-            </h1>
-            <p className="py-6 text-3xl lg:text-4xl">
-              Welcome to Gorib Homes Real Estate
-            </p>
-            <p className="py-6 text-3xl lg:text-4xl">Please Create a Account</p>
-          </div>
-          <form
-            onSubmit={handleSubmit(onSubmit)}
-            className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100"
-            data-aos="fade-right"
-            data-aos-duration="1000"
-          >
-            <div className="card-body">
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Full Name</span>
-                </label>
-                <input
-                  type="text"
-                  placeholder="Full name"
-                  className="input input-bordered"
-                  {...register("fullName", { required: true })}
-                />
-                {errors.fullName && (
-                  <span className="text-red-500">This field is required</span>
-                )}
-              </div>
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Email</span>
-                </label>
-                <input
-                  type="text"
-                  placeholder="email"
-                  className="input input-bordered"
-                  {...register("email", { required: true })}
-                />
-                {errors.email && (
-                  <span className="text-red-500">This field is required</span>
-                )}
-              </div>
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Image Url</span>
-                </label>
-                <input
-                  type="text"
-                  placeholder="image url"
-                  className="input input-bordered"
-                  {...register("image")}
-                />
-              </div>
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Password</span>
-                </label>
-                <label className="input input-bordered flex items-center gap-2">
-                  <input
-                    type={visible ? "text" : "password"}
-                    className="grow"
-                    placeholder="password"
-                    {...register("password", { required: true })}
-                  />
-
-                  <div
-                    className="text-xl cursor-pointer "
-                    onClick={() => setVisible(!visible)}
-                  >
-                    {visible ? (
-                      <FaEye className="text-[#e5958e]"></FaEye>
-                    ) : (
-                      <FaEyeSlash className="text-[#e5958e]"></FaEyeSlash>
+          <div className="text-center lg:text-left">
+            <div
+              className="box_login"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
+              <strong>
+                <div className="flex justify-center items-center ">
+                  <FaUnlockAlt className="text-[50px] " />
+                </div>
+                <h3 className="text-4xl">Register</h3>
+              </strong>
+              {/* from start */}
+              <form
+                onSubmit={handleSubmit(onSubmit)}
+                data-aos="fade-down"
+                data-aos-duration="1000"
+              >
+                <div className="">
+                  <div className="form-control">
+                    <label className="label">
+                      <span className="label-text">Full Name</span>
+                    </label>
+                    <input
+                      type="text"
+                      placeholder="Full name"
+                      className="input input-bordered"
+                      {...register("fullName", { required: true })}
+                    />
+                    {errors.fullName && (
+                      <span className="text-red-500">
+                        This field is required
+                      </span>
                     )}
                   </div>
-                </label>
-                {errors.password && (
-                  <span className="text-red-500">This field is required</span>
-                )}
-              </div>
-              <div className="form-control mt-6 p-0">
-                <button className="btn flex btn-primary items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md  bg-[#e5958e] border-transparent border-2 hover:bg-transparent hover:border-[#e5958e] hover:text-[#e5958e] text-white">
-                  Register
-                </button>
-              </div>
-              <label className="label">
-                Already have an account?{" "}
-                <Link
-                  to="/login"
-                  className="label-text-alt link link-hover text-base"
-                >
-                  Please Login
-                </Link>
-              </label>
-              <SocialLogin />
+                  <div className="form-control">
+                    <label className="label">
+                      <span className="label-text">Email</span>
+                    </label>
+                    <input
+                      type="text"
+                      placeholder="email"
+                      className="input input-bordered"
+                      {...register("email", { required: true })}
+                    />
+                    {errors.email && (
+                      <span className="text-red-500">
+                        This field is required
+                      </span>
+                    )}
+                  </div>
+                  <div className="form-control">
+                    <label className="label">
+                      <span className="label-text">Image Url</span>
+                    </label>
+                    <input
+                      type="text"
+                      placeholder="image url"
+                      className="input input-bordered"
+                      {...register("image")}
+                    />
+                  </div>
+                  <div className="form-control">
+                    <label className="label">
+                      <span className="label-text">Password</span>
+                    </label>
+                    <label className="input input-bordered flex items-center gap-2">
+                      <input
+                        type={visible ? "text" : "password"}
+                        className="grow"
+                        placeholder="password"
+                        {...register("password", { required: true })}
+                      />
+
+                      <div
+                        className="text-xl cursor-pointer "
+                        onClick={() => setVisible(!visible)}
+                      >
+                        {visible ? (
+                          <FaEye className="text-[#ff691a]"></FaEye>
+                        ) : (
+                          <FaEyeSlash className="text-[#ff691a]"></FaEyeSlash>
+                        )}
+                      </div>
+                    </label>
+                    {errors.password && (
+                      <span className="text-red-500">
+                        This field is required
+                      </span>
+                    )}
+                  </div>
+                  <div className="form-control mt-6 p-0">
+                    <button className="btn flex btn-primary items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md  bg-[#ff691a] border-transparent border-2 hover:bg-transparent hover:border-[#ff691a] hover:text-[#ff691a] text-white">
+                      Register
+                    </button>
+                  </div>
+                  <label className="label text-[#ff691a]">
+                    Already have an account?{" "}
+                    <Link
+                      to="/login"
+                      className="label-text-alt link link-hover text-[#ff691a] text-base"
+                    >
+                      Please Login
+                    </Link>
+                  </label>
+                  <SocialLogin />
+                </div>
+              </form>
             </div>
-          </form>
+          </div>
         </div>
         <Toaster
           toastOptions={{

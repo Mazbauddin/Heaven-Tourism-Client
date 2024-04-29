@@ -99,7 +99,7 @@ const Team = () => {
               </div>
             </div>
             <div
-              className="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 dark:bg-gray-800 dark:text-gray-100 bg-[#e5958e] text-white"
+              className="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 dark:bg-gray-800 dark:text-gray-100 bg-[#ff691a] text-white"
               data-aos="fade-up"
               data-aos-duration="1000"
               data-aos-easing="linear"
@@ -257,7 +257,7 @@ const Team = () => {
               </div>
             </div>
             <div
-              className="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 dark:bg-gray-800 dark:text-gray-100 bg-[#e5958e] text-white"
+              className="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 dark:bg-gray-800 dark:text-gray-100 bg-[#ff691a] text-white"
               data-aos="fade-right"
               data-aos-duration="1000"
               data-aos-easing="linear"
@@ -417,7 +417,7 @@ const Team = () => {
               </div>
             </div>
             <div
-              className="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 dark:bg-gray-800 dark:text-gray-100 bg-[#e5958e] text-white"
+              className="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 dark:bg-gray-800 dark:text-gray-100 bg-[#ff691a] text-white"
               data-aos="fade-left"
               data-aos-duration="1000"
               data-aos-easing="linear"

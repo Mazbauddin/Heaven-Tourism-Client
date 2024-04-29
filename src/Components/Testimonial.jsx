@@ -50,7 +50,7 @@ const Testimonial = () => {
                     "url(https://i.ibb.co/7yTtrBF/power-plant.png)",
                 }}
               >
-                <div className="hero-overlay bg-opacity-90  bg-[#091d44]"></div>
+                <div className="hero-overlay bg-opacity-20  bg-[#ff691a]"></div>
                 <section className="my-8 dark:bg-gray-100 dark:text-gray-800">
                   <div className="container flex flex-col items-center justify-center mx-auto lg:flex-row lg:flex-wrap lg:justify-evenly lg:px-10">
                     <div
@@ -110,7 +110,7 @@ const Testimonial = () => {
                     "url(https://i.ibb.co/7yTtrBF/power-plant.png)",
                 }}
               >
-                <div className="hero-overlay bg-opacity-90  bg-[#091d44]"></div>
+                <div className="hero-overlay bg-opacity-20  bg-[#ff691a]"></div>
                 <section className="my-8 dark:bg-gray-100 dark:text-gray-800">
                   <div className="container flex flex-col items-center justify-center mx-auto lg:flex-row lg:flex-wrap lg:justify-evenly lg:px-10">
                     <div
@@ -170,7 +170,7 @@ const Testimonial = () => {
                     "url(https://i.ibb.co/7yTtrBF/power-plant.png)",
                 }}
               >
-                <div className="hero-overlay bg-opacity-90  bg-[#091d44]"></div>
+                <div className="hero-overlay bg-opacity-20  bg-[#ff691a]"></div>
                 <section className="my-8 dark:bg-gray-100 dark:text-gray-800">
                   <div className="container flex flex-col items-center justify-center mx-auto lg:flex-row lg:flex-wrap lg:justify-evenly lg:px-10">
                     <div
@@ -230,7 +230,7 @@ const Testimonial = () => {
                     "url(https://i.ibb.co/7yTtrBF/power-plant.png)",
                 }}
               >
-                <div className="hero-overlay bg-opacity-90  bg-[#091d44]"></div>
+                <div className="hero-overlay bg-opacity-20  bg-[#ff691a]"></div>
                 <section className="my-8 dark:bg-gray-100 dark:text-gray-800">
                   <div className="container flex flex-col items-center justify-center mx-auto lg:flex-row lg:flex-wrap lg:justify-evenly lg:px-10">
                     <div

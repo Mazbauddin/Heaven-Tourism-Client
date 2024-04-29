@@ -50,7 +50,7 @@ const AddTouristSpot = () => {
         if (data.insertedId) {
           Swal.fire({
             title: "Success!",
-            text: "User Added Successfully",
+            text: "Tourist Spot Added Successfully",
             icon: "success",
             confirmButtonText: "Cool",
           });
@@ -233,7 +233,7 @@ const AddTouristSpot = () => {
         <input
           type="submit"
           value="Add Tourists Spot"
-          className=" px-4 w-full py-2 mt-4 rounded hover:bg-[#ec936fa6]  bg-[#5991e6] duration-200 text-white cursor-pointer font-semibold"
+          className=" px-4 w-full py-2 mt-4 rounded bg-[#ff691a]  hover:bg-[#5991e6] duration-200 text-white cursor-pointer font-semibold"
         />
       </form>
     </div>

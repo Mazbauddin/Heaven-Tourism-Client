@@ -67,7 +67,10 @@ const Update = () => {
       });
   };
   return (
-    <div>
+    <div className="p-24">
+      <h1 className="text-center font-bold text-5xl mb-10">
+        Update Your Tourist Spot
+      </h1>
       <form onSubmit={handleUpdate}>
         {/* Country Name */}
         <div className="md:flex mb-8">
@@ -223,7 +226,7 @@ const Update = () => {
         <input
           type="submit"
           value="Update"
-          className=" px-4 w-full py-2 mt-4 rounded hover:bg-[#ec936fa6]  bg-[#5991e6] duration-200 text-white cursor-pointer font-semibold"
+          className=" px-4 w-full py-2 mt-4 rounded bg-[#ff691a]  hover:bg-[#5991e6] duration-200 text-white cursor-pointer font-semibold"
         />
       </form>
     </div>

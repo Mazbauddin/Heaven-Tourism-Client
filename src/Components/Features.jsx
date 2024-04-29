@@ -33,7 +33,7 @@ const Features = () => {
                 data-aos-duration="1000"
                 data-aos-easing="linear"
               >
-                <FaLandmark className="text-4xl sm:text-6xl"></FaLandmark>
+                <FaLandmark className="text-4xl sm:text-6xl text-[#ff691a]"></FaLandmark>
 
                 <h3 className="my-3 text-3xl font-semibold">Bangladesh</h3>
                 <div className="space-y-1 leading-tight">
@@ -49,7 +49,7 @@ const Features = () => {
                 data-aos-duration="1000"
                 data-aos-easing="linear"
               >
-                <MdSevereCold className="text-4xl sm:text-6xl" />
+                <MdSevereCold className="text-4xl sm:text-6xl text-[#ff691a]" />
                 <h3 className="my-3 text-3xl font-semibold">Thailand</h3>
                 <div className="space-y-1 leading-tight">
                   <p>Bangkok, Chiang Mai, Ayutthaya, Phuket, Phi Phi Islands</p>
@@ -61,7 +61,7 @@ const Features = () => {
                 data-aos-duration="1000"
                 data-aos-easing="linear"
               >
-                <ImPower className="text-4xl sm:text-6xl" />
+                <ImPower className="text-4xl sm:text-6xl text-[#ff691a]" />
                 <h3 className="my-3 text-3xl font-semibold">Indonesia</h3>
                 <div className="space-y-1 leading-tight">
                   <p>
@@ -76,7 +76,7 @@ const Features = () => {
                 data-aos-duration="1000"
                 data-aos-easing="linear"
               >
-                <GiNuclearPlant className="text-4xl sm:text-6xl" />
+                <GiNuclearPlant className="text-4xl sm:text-6xl text-[#ff691a]" />
                 <h3 className="my-3 text-3xl font-semibold">Malaysia</h3>
                 <div className="space-y-1 leading-tight">
                   <p>
@@ -91,7 +91,7 @@ const Features = () => {
                 data-aos-duration="1000"
                 data-aos-easing="linear"
               >
-                <PiThermometerColdFill className="text-4xl sm:text-6xl" />
+                <PiThermometerColdFill className="text-4xl sm:text-6xl text-[#ff691a]" />
                 <h3 className="my-3 text-3xl font-semibold">Vietnam</h3>
                 <div className="space-y-1 leading-tight">
                   <p>
@@ -106,7 +106,7 @@ const Features = () => {
                 data-aos-duration="1000"
                 data-aos-easing="linear"
               >
-                <FaWarehouse className="text-4xl sm:text-6xl" />
+                <FaWarehouse className="text-4xl sm:text-6xl text-[#ff691a]" />
                 <h3 className="my-3 text-3xl font-semibold">Cambodia</h3>
                 <div className="space-y-1 leading-tight">
                   <p>

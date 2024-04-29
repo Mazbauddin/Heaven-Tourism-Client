@@ -21,30 +21,30 @@ const SocialLogin = () => {
   };
   return (
     <>
-      <div className="divider">continue with</div>
+      <div className="divider divider-error text-[#ff691a]">continue with</div>
       <div className="flex justify-around mb-10">
         {/* google */}
         <FaGoogle
           onClick={() => handleSocialLogin(googleLogin)}
-          className="text-[20px] cursor-pointer text-[#e5958e]"
+          className="text-[20px] cursor-pointer text-[#ff691a]"
           title="Google"
         ></FaGoogle>
         {/* github */}
         <FaGithub
           onClick={() => handleSocialLogin(githubLogin)}
-          className="text-[20px] cursor-pointer text-[#e5958e]"
+          className="text-[20px] cursor-pointer text-[#ff691a]"
           title="Github"
         ></FaGithub>
         {/* twitter */}
         <FaTwitter
           onClick={() => handleSocialLogin(twitterLogin)}
-          className=" text-[20px] cursor-pointer text-[#e5958e]"
+          className=" text-[20px] cursor-pointer text-[#ff691a]"
           title="Twitter"
         ></FaTwitter>
         {/* facebook */}
         <FaFacebook
           onClick={() => handleSocialLogin(facebookLogin)}
-          className="text-[20px] cursor-pointer text-[#e5958e]"
+          className="text-[20px] cursor-pointer text-[#ff691a]"
           title="Facebook"
         ></FaFacebook>
       </div>
