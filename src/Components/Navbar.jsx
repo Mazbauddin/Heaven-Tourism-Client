@@ -27,12 +27,12 @@ const Navbar = () => {
   }, [theme]);
   const handleToggle = (e) => {
     if (e.target.checked) {
-      setTheme("aqua");
+      setTheme("synthwave");
     } else {
       setTheme("light");
     }
   };
-
+  // synthwave
   return (
     <div className="max-w-[1920px] mx-auto ">
       <header className="shadow-lg h-20 flex w-full dark:bg-[#120505] px-5 md:px-[50px] lg:px-[80px] xl:px-[120px] 2xl:px-[150px]">

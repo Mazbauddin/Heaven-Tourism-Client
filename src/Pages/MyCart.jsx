@@ -33,8 +33,6 @@ const MyCart = () => {
 
   return (
     <div className="p-24">
-      <h2>spots: {item.length}</h2>
-
       <div className="overflow-x-auto">
         <table className="table">
           {/* head */}
