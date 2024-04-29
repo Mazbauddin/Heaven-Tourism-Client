@@ -39,11 +39,7 @@ const Slider = () => {
             >
               <div className="hero-overlay bg-opacity-60"></div>
               <div className="hero-content text-center text-neutral-content">
-                <div
-                  className="max-w-md"
-                  data-aos="fade-up"
-                  data-aos-duration="1000"
-                >
+                <div className="" data-aos="fade-up" data-aos-duration="1000">
                   <h1 className="mb-5 text-5xl lg:text-8xl font-bold">
                     Saint Martin
                   </h1>
@@ -74,7 +70,7 @@ const Slider = () => {
                 data-aos="fade-up"
                 data-aos-duration="1000"
               >
-                <div className="max-w-md">
+                <div className="">
                   <h1 className="mb-5 text-5xl lg:text-8xl font-bold">
                     Cox's Bazar
                   </h1>
@@ -104,7 +100,7 @@ const Slider = () => {
                 data-aos="fade-up"
                 data-aos-duration="1000"
               >
-                <div className="max-w-md">
+                <div className="">
                   <h1 className="mb-5 text-5xl lg:text-8xl font-bold">
                     Bandarban
                   </h1>
@@ -134,7 +130,7 @@ const Slider = () => {
                 data-aos="fade-up"
                 data-aos-duration="1000"
               >
-                <div className="max-w-md">
+                <div className="">
                   <h1 className="mb-5 text-5xl lg:text-8xl font-bold">
                     Rangamati
                   </h1>

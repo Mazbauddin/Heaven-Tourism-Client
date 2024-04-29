@@ -71,9 +71,7 @@ const AddTouristSpot = () => {
               name="country_Name"
               className="select select-bordered w-full"
             >
-              <option disabled selected>
-                Pick your favorite Country
-              </option>
+              <option>Pick Your Southern favorite Country</option>
               <option>Bangladesh</option>
               <option>Thailand</option>
               <option>Indonesia</option>
@@ -91,7 +89,7 @@ const AddTouristSpot = () => {
               <input
                 type="text"
                 name="tourists_spot_name"
-                placeholder="Available Quantity"
+                placeholder="Tourists Spot Name"
                 className="input input-bordered w-full"
               />
             </label>

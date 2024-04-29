@@ -82,7 +82,7 @@ const Update = () => {
               className="select select-bordered w-full"
             >
               <option disabled selected>
-                Southern favorite Country
+                Pick Your Southern favorite Country
               </option>
               <option>Bangladesh</option>
               <option>Thailand</option>
