@@ -4,6 +4,7 @@ import { IoCloseSharp } from "react-icons/io5";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import useAuthHooks from "../Hooks/UseAuthHooks";
 import toast from "react-hot-toast";
+import { Tooltip } from "react-tooltip";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -36,7 +37,7 @@ const Navbar = () => {
   return (
     <div className="max-w-[1920px] mx-auto ">
       <header className="shadow-lg h-20 flex w-full dark:bg-[#120505] px-5 md:px-[50px] lg:px-[80px] xl:px-[120px] 2xl:px-[150px]">
-        <Link to="/" className="flex flex-shrink-0 items-center">
+        <Link to="/" className="flex flex-shrink-0 items-center ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="40"
@@ -53,8 +54,10 @@ const Navbar = () => {
               d="M0 21h8.774c2.002 0 4.076.122 5.78 1.172a10.02 10.02 0 0 1 3.274 3.274C18.878 27.15 19 29.224 19 31.226V40H6a6 6 0 0 1-6-6V21ZM40 2a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"
             ></path>
           </svg>
+
           <a className="text-2xl font-bold text-[#ff691a] ml-3">Heaven</a>
         </Link>
+
         {/* middle */}
         <nav className="header-links md:contents font-medium text-base  hidden ">
           <ul className="flex gap-8 items-center ml-4 xl:ml-8 mr-auto w-full justify-center dark:text-orange-500">

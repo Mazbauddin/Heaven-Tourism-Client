@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form";
 import useAuthHooks from "../Hooks/UseAuthHooks";
 import SocialLogin from "../Components/SocialLogin";
 import toast, { Toaster } from "react-hot-toast";
+import { Tooltip } from "react-tooltip";
 
 const Login = () => {
   const { signInUser, setLoading } = useAuthHooks();
@@ -111,17 +112,23 @@ const Login = () => {
                     )}
                   </div>
                   <div className="form-control mt-6 p-0">
-                    <button className="btn flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md  bg-[#ff691a] border-transparent border-2 hover:bg-transparent hover:border-[#ff691a] hover:text-[#ff691a] text-white">
+                    <button className="btn flex items-center my-anchor-element justify-center w-full p-3 font-semibold tracking-wide rounded-md  bg-[#ff691a] border-transparent border-2 hover:bg-transparent hover:border-[#ff691a] hover:text-[#ff691a] text-white">
                       Login
+                      <Tooltip anchorSelect=".my-anchor-element" place="top">
+                        Click me
+                      </Tooltip>
                     </button>
                   </div>
                   <label className="label text-[#ff691a]">
                     New here?{" "}
                     <Link
                       to="/register"
-                      className="label-text-alt link link-hover text-[#ff691a] text-base"
+                      className="label-text-alt link link-hover text-[#ff691a] text-base my-anchor-element"
                     >
                       Create an account
+                      <Tooltip anchorSelect=".my-anchor-element" place="top">
+                        You are new Here Please Register
+                      </Tooltip>
                     </Link>
                   </label>
                 </form>

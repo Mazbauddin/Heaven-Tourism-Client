@@ -7,6 +7,7 @@ import { FaEye, FaEyeSlash, FaUnlockAlt } from "react-icons/fa";
 import useAuthHooks from "../Hooks/UseAuthHooks";
 import SocialLogin from "../Components/SocialLogin";
 import toast, { Toaster } from "react-hot-toast";
+import { Tooltip } from "react-tooltip";
 
 const Register = () => {
   const { createUser, updateUserProfile, setLoading } = useAuthHooks() || {};
@@ -161,9 +162,12 @@ const Register = () => {
                     Already have an account?{" "}
                     <Link
                       to="/login"
-                      className="label-text-alt link link-hover text-[#ff691a] text-base"
+                      className="label-text-alt link link-hover my-anchor-element text-[#ff691a] text-base"
                     >
                       Please Login
+                      <Tooltip anchorSelect=".my-anchor-element" place="top">
+                        If you already have an account, you can login here
+                      </Tooltip>
                     </Link>
                   </label>
                   <SocialLogin />

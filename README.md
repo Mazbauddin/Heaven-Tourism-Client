@@ -12,6 +12,7 @@ Resources:
 - [React-Hot-Toast](https://react-hot-toast.com/)
 - [React-Icons](https://react-icons.github.io/react-icons/)
 - [Daisy UI](https://daisyui.com/)
+- [React-Tooltip](https://www.npmjs.com/package/react-tooltip)
 - [TailwindCSS](https://tailwindcss.com/)
 - [Swiper Js](https://swiperjs.com/)
 - [Firebase](https://firebase.google.com/)
