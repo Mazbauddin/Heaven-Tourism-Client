@@ -45,12 +45,14 @@ const Route = createBrowserRouter([
         loader: () => fetch("http://localhost:5000/myCart"),
       },
       {
-        path: "/viewDetails",
+        path: "/viewDetails/:id",
         element: (
           <PrivateRoute>
             <View_Details></View_Details>
           </PrivateRoute>
         ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/tourist_spot/${params.id}`),
       },
       {
         path: "update/:id",
