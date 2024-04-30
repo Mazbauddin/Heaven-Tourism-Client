@@ -13,6 +13,7 @@ Resources:
 - [React-Icons](https://react-icons.github.io/react-icons/)
 - [Daisy UI](https://daisyui.com/)
 - [React-Tooltip](https://www.npmjs.com/package/react-tooltip)
+- [React-Simple-Typewriter](https://www.npmjs.com/package/react-simple-typewriter)
 - [TailwindCSS](https://tailwindcss.com/)
 - [Swiper Js](https://swiperjs.com/)
 - [Firebase](https://firebase.google.com/)
