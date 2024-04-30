@@ -3,6 +3,7 @@ import { GiNuclearPlant } from "react-icons/gi";
 import { ImPower } from "react-icons/im";
 import { MdSevereCold } from "react-icons/md";
 import { PiThermometerColdFill } from "react-icons/pi";
+import { Typewriter } from "react-simple-typewriter";
 const Features = () => {
   return (
     <div>
