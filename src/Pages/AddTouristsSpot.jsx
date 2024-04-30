@@ -3,6 +3,7 @@ import useAuthHooks from "../Hooks/UseAuthHooks";
 const AddTouristSpot = () => {
   const { user } = useAuthHooks() || {};
   const handleAddTouristSpot = (event) => {
+    console.log("hello");
     event.preventDefault();
 
     const form = event.target;
@@ -37,7 +38,7 @@ const AddTouristSpot = () => {
     console.log(newTouristSpot);
 
     // send data to the server
-    fetch("http://localhost:5000/tourist_spot", {
+    fetch("https://tourism-management-server-rho.vercel.app/touristSpot", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -105,6 +106,7 @@ const AddTouristSpot = () => {
               <input
                 type="text"
                 name="spot_Location"
+                defaultValue={`Southeast Asia`}
                 placeholder="location"
                 className="input input-bordered w-full"
               />

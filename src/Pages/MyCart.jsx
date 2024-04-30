@@ -9,7 +9,9 @@ const MyCart = () => {
   const [control, setControl] = useState(false);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/myCart/${user?.email}`)
+    fetch(
+      `https://tourism-management-server-rho.vercel.app/myCart/${user?.email}`
+    )
       .then((res) => res.json())
       .then((data) => {
         setItem(data);
@@ -27,7 +29,7 @@ const MyCart = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/delete/${id}`, {
+        fetch(`https://tourism-management-server-rho.vercel.app/delete/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

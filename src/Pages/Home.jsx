@@ -13,13 +13,13 @@ const Home = () => {
   const [countryTouristSpotLoading, setCountryTouristSpotLoading] =
     useState(false);
   const { user } = useAuthHooks() || {};
-  const tourist_spot = useLoaderData();
+  const touristSpot = useLoaderData();
   const [allTouristSpot, setAllTouristSpot] = useState([]);
 
   useEffect(() => {
     // countryTouristSpot
     setCountryTouristSpotLoading(true);
-    fetch("http://localhost:5000/tourist_spot")
+    fetch("https://tourism-management-server-rho.vercel.app/touristSpot")
       .then((res) => res.json())
       .then((data) => {
         setCountryTouristSpotLoading(false);
@@ -27,7 +27,7 @@ const Home = () => {
       });
 
     // all products
-    fetch("http://localhost:5000/tourist_spot")
+    fetch("https://tourism-management-server-rho.vercel.app/touristSpot")
       .then((res) => res.json())
       .then((data) => setAllTouristSpot(data));
   }, []);

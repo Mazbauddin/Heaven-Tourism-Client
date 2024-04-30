@@ -1,7 +1,6 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Tourist_Card = ({ item }) => {
-  // const navigate = useNavigate();
   const {
     _id,
     country_Name,
@@ -32,7 +31,7 @@ const Tourist_Card = ({ item }) => {
         </div>
       </div>
       <img
-        src="https://source.unsplash.com/301x301/?random"
+        src={image_Url}
         alt=""
         className="object-cover object-center w-full h-72 dark:bg-gray-500"
       />
@@ -51,7 +50,7 @@ const Tourist_Card = ({ item }) => {
             >
               <path d="M453.122,79.012a128,128,0,0,0-181.087.068l-15.511,15.7L241.142,79.114l-.1-.1a128,128,0,0,0-181.02,0l-6.91,6.91a128,128,0,0,0,0,181.019L235.485,449.314l20.595,21.578.491-.492.533.533L276.4,450.574,460.032,266.94a128.147,128.147,0,0,0,0-181.019ZM437.4,244.313,256.571,425.146,75.738,244.313a96,96,0,0,1,0-135.764l6.911-6.91a96,96,0,0,1,135.713-.051l38.093,38.787,38.274-38.736a96,96,0,0,1,135.765,0l6.91,6.909A96.11,96.11,0,0,1,437.4,244.313Z"></path>
             </svg>
-            <span className="ml-2">Total Time: {travel_time} Hours</span>
+            <span className="ml-2">Total Time: {travel_time} Days</span>
           </button>
           <button
             type="button"
@@ -109,12 +108,8 @@ const Tourist_Card = ({ item }) => {
         </div>
       </div>
       <div className=" mx-5">
-        <button
-          // onClick={() => navigate(`/tourist_spot/${_id}`)}
-          className=" px-4  w-full py-2 mt-4 rounded hover:bg-transparent border-2 border-primary hover:border-2 bg-primary duration-200 text-white cursor-pointer font-semibold"
-        >
+        <button className=" px-4  w-full py-2 mt-4 rounded hover:bg-transparent border-2 border-primary hover:border-2 bg-primary duration-200 text-white cursor-pointer font-semibold">
           <Link to={`/viewDetails/${_id}`}> View Details</Link>
-          {/* <Link to={"viewDetails"}> View Details</Link> */}
         </button>
       </div>
     </div>

@@ -21,7 +21,8 @@ const Route = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("http://localhost:5000/tourist_spot"),
+        loader: () =>
+          fetch("https://tourism-management-server-rho.vercel.app/touristSpot"),
       },
       {
         path: "/addTouristSpot",
@@ -42,7 +43,8 @@ const Route = createBrowserRouter([
             <MyCart></MyCart>
           </PrivateRoute>
         ),
-        loader: () => fetch("http://localhost:5000/myCart"),
+        loader: () =>
+          fetch("https://tourism-management-server-rho.vercel.app/myCart"),
       },
       {
         path: "/viewDetails/:id",
@@ -52,12 +54,13 @@ const Route = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/tourist_spot/${params.id}`),
+          fetch(
+            `https://tourism-management-server-rho.vercel.app/touristSpot/${params.id}`
+          ),
       },
       {
         path: "update/:id",
         element: <Update></Update>,
-        // loader: ({ params }) => fetch(`http://localhost:5000/coffee/${params.id}`),
       },
       {
         path: "/register",

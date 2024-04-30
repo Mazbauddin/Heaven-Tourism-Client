@@ -20,8 +20,9 @@ const View_Details = ({ item }) => {
     user_Name,
     image_Url,
   } = item || {};
+  console.log(spot.travel_time);
   useEffect(() => {
-    fetch(`http://localhost:5000/singleSpot/${id}`)
+    fetch(`https://tourism-management-server-rho.vercel.app/singleSpot/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setSpot(data);
@@ -31,18 +32,30 @@ const View_Details = ({ item }) => {
   return (
     <div className="hero min-h-screen bg-base-200">
       <div className="hero-content flex-col lg:flex-row">
-        <img
-          src="https://daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg"
-          className="max-w-sm rounded-lg shadow-2xl"
-        />
+        <img className="h-full w-full" src={spot.image_Url} />
         <div>
-          <h1 className="text-5xl font-bold">Hello</h1>
-          <p className="py-6">
-            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-            excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
-            a id nisi.
-          </p>
-          <button className="btn btn-primary">Get Started</button>
+          <h1 className="text-5xl font-bold">{spot.country_Name}</h1>
+          <p className="py-4 text-2xl">{spot.spot_Location}</p>
+          <p className="py-4 text-4xl">{spot.tourists_spot_name}</p>
+          <div className="py-4 flex flex-col lg:flex-row justify-between">
+            <p className="py-4 text-lg">Total Time: {spot.travel_time} Hours</p>
+            <p className="py-4 text-lg">Season : {spot.seasonality}</p>
+          </div>
+          <div className="py-4">
+            <p className="py-4 text-lg ">
+              Per Person Cost : $ {spot.average_cost} USD
+            </p>
+            <p className="py-4 text-lg ">
+              Total Per Year Visitors : {spot.totalVisitorsPerYear} People
+            </p>
+          </div>
+          <p className="py-4  text-lg ">{spot.short_Description}</p>
+
+          <div className="w-full flex justify-between items-center">
+            <button className="btn w-full btn-primary mt-10">
+              Get Started
+            </button>
+          </div>
         </div>
       </div>
     </div>

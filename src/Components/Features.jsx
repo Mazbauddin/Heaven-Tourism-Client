@@ -9,7 +9,7 @@ const Features = () => {
       <div
         className="hero min-h-screen mt-20"
         style={{
-          backgroundImage: "url(https://i.ibb.co/pyMG4TG/factory.jpg)",
+          backgroundImage: "url(https://i.ibb.co/5BKRz7k/viatnam.png)",
         }}
       >
         <div className="hero-overlay bg-opacity-70"></div>

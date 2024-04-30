@@ -47,7 +47,7 @@ const Testimonial = () => {
                 className="hero min-h-screen mt-20 text-white"
                 style={{
                   backgroundImage:
-                    "url(https://i.ibb.co/7yTtrBF/power-plant.png)",
+                    "url(https://i.ibb.co/PgMmNZ2/saint-Martin.jpg)",
                 }}
               >
                 <div className="hero-overlay bg-opacity-20  bg-[#ff691a]"></div>
@@ -86,7 +86,7 @@ const Testimonial = () => {
                       </div>
                       <div className="flex flex-col items-center justify-center p-8 rounded-b-lg dark:bg-violet-600 dark:text-gray-50">
                         <img
-                          src="https://source.unsplash.com/50x50/?portrait?1"
+                          src="https://i.ibb.co/w4BVX1L/thailand.jpg"
                           alt=""
                           className="w-16 h-16 mb-2  bg-center bg-cover rounded-full dark:bg-gray-500 dark:bg-gray-300"
                         />
@@ -106,8 +106,7 @@ const Testimonial = () => {
               <div
                 className="hero min-h-screen mt-20 text-white"
                 style={{
-                  backgroundImage:
-                    "url(https://i.ibb.co/7yTtrBF/power-plant.png)",
+                  backgroundImage: "url(https://i.ibb.co/5BKRz7k/viatnam.png)",
                 }}
               >
                 <div className="hero-overlay bg-opacity-20  bg-[#ff691a]"></div>
@@ -146,7 +145,7 @@ const Testimonial = () => {
                       </div>
                       <div className="flex flex-col items-center justify-center p-8 rounded-b-lg dark:bg-violet-600 dark:text-gray-50">
                         <img
-                          src="https://source.unsplash.com/50x50/?portrait?2"
+                          src="https://i.ibb.co/YkH4521/bali2.png"
                           alt=""
                           className="w-16 h-16 mb-2  bg-center bg-cover rounded-full dark:bg-gray-500 dark:bg-gray-300"
                         />
