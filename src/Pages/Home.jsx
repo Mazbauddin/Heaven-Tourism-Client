@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import Features from "../Components/Features";
 import useAuthHooks from "../Hooks/UseAuthHooks";
 import CountryCard from "../Components/CountryCard";
+import { Typewriter } from "react-simple-typewriter";
 
 const Home = () => {
   const [countryTouristSpot, setCountryTouristSpot] = useState([]);
@@ -56,14 +57,6 @@ const Home = () => {
               : allTouristSpot?.map((item) => (
                   <Tourist_Card key={item._id} item={item} />
                 ))}
-
-            {/* {allTouristSpot?.length > 9 && (
-              <div className="mt-10 flex justify-center">
-                <button className="text-white bg-[#FF497C] border-0 py-2 px-6 focus:outline-none hover:bg-[#ab3154] rounded font-semibold duration-200">
-                  See All
-                </button>
-              </div>
-            )} */}
           </div>
         </div>
       </div>

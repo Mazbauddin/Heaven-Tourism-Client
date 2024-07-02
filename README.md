@@ -1,5 +1,18 @@
 # React Heaven Tourism Management Site
 
+Locally Run Your Computer:
+
+Open Terminal
+
+1. First Type
+   "npm install"
+
+2. Second Type
+   "npm run dev"
+
+   Happy Coding.......
+
+
 Live site:
 
 - [Heaven Tourism Management site](https://heaven-tourism-management-site.web.app/)
